@@ -126,6 +126,7 @@
                 font-family: poppins;
                 font-weight: 500;
                 border-color: white;
+                box-shadow: 0 0 100px 2px white, inset 0 0 25px 1px white;
             }
             button:hover {
                 transition: 0.2s;
@@ -143,8 +144,19 @@
             }
             button:active {
                 transition: 0.2s;
+                animation: 0.2s ease-out 0s clickglowwowie;
                 background-color: #1e1e1e;
                 box-shadow: var(--glow);
+                animation-fill-mode: forwards;
+            }
+            @keyframes clickglowwowie {
+                from {
+                    box-shadow: none;
+                }
+                to {
+                    background-color: #1e1e1e;
+                    box-shadow: var(--glow);
+                }
             }
         </style>
     </body>
